@@ -1,0 +1,7 @@
+services:
+  node:
+    build:
+      context: ./
+      args:
+        NODE_VERSION: ${NODE_VERSION}
+    image: compose-node:${NODE_VERSION}

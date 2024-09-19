@@ -1,0 +1,9 @@
+1. docker logs –follow –tail 5 8fdb73cf2d980bd60038d
+
+	logs 			affiche les logs du container renseigné
+	--follow 		permet de suivre les logs en temps réel
+	-- tail [chiffre] 	permet d’avoir un nombre limité des derniers logs
+
+2. sur un navigateur internet, taper "localhost:5000"
+
+3. un nouveau log apparaît dans mon terminal

@@ -1,0 +1,3 @@
+1. création du dockerfile
+2. docker build -t nginx-fore .
+3. docker run -p 80:80 nginx-fore

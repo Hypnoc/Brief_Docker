@@ -1,0 +1,8 @@
+1.docker run --name enjoy_nx -p 5000:80 -d --restart unless-stopped nginx
+
+	--name 					enjoy_nx pour nommer mon container 
+	-d 					pour exécuter le container en arrière-plan
+	-p 5000:80 				mappe mon port 5000 au port 80 du container
+	--restart avec option unless-stopped 	permet de redémarrer le container sauf si l’arrêt vient de mon 	initiative
+
+2. Dans un navigateur internet, taper "localhost:5000" pour voir apparaître la page d'accueil de NGINX

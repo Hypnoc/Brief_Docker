@@ -1,0 +1,7 @@
+1. docker run -ti [ID  container]
+2. apk update && apk add --no-cache nodejs
+3. exit
+4. docker commit [ID conteneur] [nom de l’image créée]
+5. docker images
+
+	une nouvelle image avec mes changements apparaît

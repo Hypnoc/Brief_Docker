@@ -1,0 +1,13 @@
+1. création du docker-compose.yaml    
+2. docker-compose up -d
+3. configuration simple du wordpress « titre_du_site » + insertion d’une base de données « test » et table « table_test »
+4. docker-compose down
+5. docker-compose up -d
+6. docker exec -ti [ID container mysql] mysql -u root -p
+7. SHOW DATABASES;
+
+	La BDD est bien présente
+
+7. localhost:8080
+
+	Le site est existant avec les configurations

@@ -1,0 +1,5 @@
+1. Ecriture du Dockerfile
+2. ChatGPT pour écrire l’application js
+3. docker build -t appjs:1.0 .
+4. docker run -p 3000:3000 appjs:1.0
+5. Dans un navigateur internet, taper localhost:3000

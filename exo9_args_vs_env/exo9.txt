@@ -1,0 +1,5 @@
+1. Rédaction des Dockerfile et docker-compose.yaml + .env (pour ne pas avoir à surcharger de valeur pour la variable NODE_VERSION, par défaut « 20 »)
+2. NODE_VERSION=18 docker-compose build
+3. docker run -it node-compose:18
+
+	la version de nodejs est bien la 18

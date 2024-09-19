@@ -1,0 +1,9 @@
+1. docker volume create volume-nginx
+2. docker run -d –name my-nginx -p 8080:80 -v volume-nginx:/usr/share/nginx/html/ nginx:latest
+
+	-v	monte le volume créé sur le dossier du container
+
+3. docker exec -ti my-nginx bash
+4. cd /usr/share/nginx/html/
+5. echo « salut » > index.html
+6. Dans un navigateur internet, taper "localhost:8080", "salut" apparaît

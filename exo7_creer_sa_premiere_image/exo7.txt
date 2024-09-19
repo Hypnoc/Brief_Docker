@@ -1,0 +1,5 @@
+1. Dockerfile: 	FROM nginx:latest
+2. docker build -t top:0.0.1 .
+3. docker run -d -p 80:80 top:0.0.1
+4. docker ps
+5. docker top [ID container]

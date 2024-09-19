@@ -1,0 +1,3 @@
+1. Écriture Dockerfile
+2. docker build -t echo:1.0 .
+3. docker run echo:1.0
