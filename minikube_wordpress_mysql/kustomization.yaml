@@ -1,0 +1,10 @@
+resources:
+    - /back/database-deployment.yaml
+    - /back/database-pv.yaml
+    - /back/database-pvc.yaml
+    - /back/database-secret.yaml
+    - /back/database-service.yaml
+    - /front/front-deployment.yaml
+    - /front/front-pv.yaml
+    - /front/front-pvc.yaml
+    - /front/front-service.yaml

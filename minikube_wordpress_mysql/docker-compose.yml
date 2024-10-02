@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: unless-stopped
+    ports: 
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    depends_on:
+      - db
+    volumes:
+      - wordpress:/var/www/html/wp-content
+      # Add other files or folders that you want to override here e.g. stylesheets
+    ports:
+      - "8880:80"
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: database
+      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_PASSWORD: password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: unless_stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql:3306  # Nom du service MySQL
+      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - db
+
+volumes:
+  mysql-data:
+  wordpress:
