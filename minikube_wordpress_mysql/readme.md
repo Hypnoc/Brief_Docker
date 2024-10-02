@@ -1,20 +1,44 @@
-# Brief Minikube
+# 🌟 Minikube WordPress + MySQL Deployment
 
-Contexte:
+## 📝 Contexte
 
-Projet Minikube, l'objectif est de déployer la partie front Wordpress connecté avec le back MYSQL. J'utilise le fichier kustomization pour prendre en compte tous les yaml nécessaires.
+Ce projet a pour objectif de déployer **WordPress** comme frontend connecté à une base de données **MySQL** comme backend sur **Minikube**. Le fichier `kustomization.yaml` est utilisé pour orchestrer et gérer tous les fichiers YAML nécessaires au déploiement.
 
----------------------------------------------------------------------------------------------
+---
 
-Pour commencer :
+## 🚀 Pour commencer
 
-À la racine du repo, le fichier kustomization.yaml qui déploie les yaml nécessaires.
+### Structure du projet :
+- **À la racine du repo** : Le fichier `kustomization.yaml` qui déploie toutes les ressources nécessaires.
+- **Dossier `front/`** : Contient les fichiers YAML relatifs à WordPress (frontend).
+- **Dossier `back/`** : Contient les fichiers YAML relatifs à MySQL (backend).
 
-Dans le dossier front : les yaml relatifs à Wordpress
-Dans le dossier back : les yaml relatifs à MYSQL 8
+### Commandes principales :
+1. **Déployer WordPress et MySQL**  
+   Utilisez la commande suivante pour déployer et connecter le frontend WordPress au backend MySQL :
+   
+    ```bash
+   $ kubectl apply -k ./
+    ```
 
-$ kubectl apply -k ./           # (./ si vous vous trouvez à la racine) pour déployer et connecter le front et le back
-$ minikube service wordpress    # pour se connecter au service wordpress
-$ kubectl delete -k ./          # (./ si vous vous trouvez à la racine) pour détruire tout le déploiement relatif à votre fichier kustomization.yaml
+    Accéder au service WordPress
+    Une fois le déploiement terminé, accédez à WordPress via Minikube avec la commande suivante :
 
---------------------------------------------------------------------------------------------
+    ```bash
+   $ minikube service wordpress
+    ```
+
+Nettoyer le déploiement
+Pour supprimer toutes les ressources créées lors du déploiement :
+
+    ```bash
+    $ kubectl delete -k ./
+    ```
+    
+
+📁 Structure du projet
+
+.
+├── kustomization.yaml  # Fichier principal de configuration Kustomize
+├── front/              # Contient les fichiers YAML pour WordPress
+└── back/               # Contient les fichiers YAML pour MySQL
