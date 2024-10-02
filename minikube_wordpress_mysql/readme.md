@@ -39,6 +39,8 @@ Pour supprimer toutes les ressources créées lors du déploiement :
 
 📁 Structure du projet
 
-.   ├── kustomization.yaml # Fichier principal de configuration Kustomize 
-    ├── front/ # Contient les fichiers YAML pour WordPress 
+.   ├── kustomization.yaml # Fichier principal de configuration Kustomize
+
+    ├── front/ # Contient les fichiers YAML pour WordPress
+    
     └── back/ # Contient les fichiers YAML pour MySQ
