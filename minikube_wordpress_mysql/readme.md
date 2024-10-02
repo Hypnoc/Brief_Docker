@@ -32,7 +32,7 @@ Nettoyer le déploiement
 Pour supprimer toutes les ressources créées lors du déploiement :
 
 
-    $ kubectl delete -k ./
+        $ kubectl delete -k ./
 
 
     
@@ -42,5 +42,5 @@ Pour supprimer toutes les ressources créées lors du déploiement :
 .   ├── kustomization.yaml # Fichier principal de configuration Kustomize
 
     ├── front/ # Contient les fichiers YAML pour WordPress
-    
+
     └── back/ # Contient les fichiers YAML pour MySQ
