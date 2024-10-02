@@ -27,17 +27,18 @@ Ce projet a pour objectif de déployer **WordPress** comme frontend connecté à
     ```bash
    $ minikube service wordpress
     ```
-
+    
 Nettoyer le déploiement
 Pour supprimer toutes les ressources créées lors du déploiement :
 
-    ```bash
+
     $ kubectl delete -k ./
-    ```
+
+
     
 
 📁 Structure du projet
 
 .   ├── kustomization.yaml # Fichier principal de configuration Kustomize 
     ├── front/ # Contient les fichiers YAML pour WordPress 
-    └── back/ # Contient les fichiers YAML pour MySQL
+    └── back/ # Contient les fichiers YAML pour MySQ
